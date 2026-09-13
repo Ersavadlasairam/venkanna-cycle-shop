@@ -1,0 +1,915 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>VENKANNA CYCLE SHOP | Best Quality First</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #080c0e;
+            color: white;
+            line-height: 1.6;
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 18px 7%;
+            background: #080c0e;
+            border-bottom: 1px solid #242a2d;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #ffd21c;
+        }
+
+        .logo span {
+            display: block;
+            color: white;
+            font-size: 12px;
+            font-weight: normal;
+            letter-spacing: 2px;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        nav ul a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul a:hover {
+            color: #ffd21c;
+        }
+
+        .call-btn {
+            background: #ffd21c;
+            color: #111;
+            padding: 12px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+
+        /* HERO */
+
+        .hero {
+            min-height: 650px;
+            display: flex;
+            align-items: center;
+            padding: 70px 7%;
+
+            background:
+                linear-gradient(90deg, #080c0e 30%, rgba(8,12,14,0.45)),
+                url("https://images.unsplash.com/photo-1485965120184-e220f721d03e?auto=format&fit=crop&w=1600&q=85");
+
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero-content {
+            max-width: 700px;
+        }
+
+        .experience {
+            color: #ccc;
+            font-size: 18px;
+            letter-spacing: 3px;
+            margin-bottom: 15px;
+        }
+
+        .telugu-small {
+            color: #ffd21c;
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+
+        .hero h1 {
+            font-size: clamp(45px, 7vw, 82px);
+            line-height: 0.95;
+            color: #ffd21c;
+            margin-bottom: 20px;
+        }
+
+        .hero h2 {
+            font-size: 32px;
+            font-style: italic;
+            margin-bottom: 8px;
+        }
+
+        .hero-telugu {
+            color: #ffd21c;
+            font-size: 22px;
+            margin-bottom: 25px;
+        }
+
+        .hero-text {
+            color: #ddd;
+            font-size: 18px;
+            max-width: 580px;
+            margin-bottom: 30px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .main-btn,
+        .whatsapp-btn {
+            display: inline-block;
+            padding: 15px 25px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .main-btn {
+            background: #ffd21c;
+            color: #111;
+        }
+
+        .whatsapp-btn {
+            background: #18c964;
+            color: white;
+        }
+
+
+        /* COMMON */
+
+        section {
+            padding: 80px 7%;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 45px;
+            margin-bottom: 5px;
+        }
+
+        .yellow {
+            color: #ffd21c;
+        }
+
+        .telugu-title {
+            text-align: center;
+            color: #ffd21c;
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: #aaa;
+            margin-bottom: 45px;
+        }
+
+
+        /* SERVICES */
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .service-card {
+            padding: 30px;
+            background: #111719;
+            border: 1px solid #30383b;
+            border-radius: 12px;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            border-color: #ffd21c;
+        }
+
+        .service-icon {
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+
+        .service-card h3 {
+            margin-bottom: 5px;
+            font-size: 21px;
+        }
+
+        .service-telugu {
+            color: #ffd21c;
+            margin-bottom: 10px;
+        }
+
+        .service-card p {
+            color: #aaa;
+        }
+
+
+        /* GALLERY */
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+        }
+
+        .gallery-item {
+            overflow: hidden;
+            border-radius: 10px;
+            background: #111;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            display: block;
+            transition: 0.4s;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.08);
+        }
+
+        .gallery-title {
+            padding: 12px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .gallery-telugu {
+            color: #ffd21c;
+            font-size: 14px;
+        }
+
+
+        /* ABOUT */
+
+        .about {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about h2 {
+            font-size: 40px;
+            margin-bottom: 5px;
+        }
+
+        .about-telugu {
+            color: #ffd21c;
+            font-size: 21px;
+            margin-bottom: 20px;
+        }
+
+        .about p {
+            color: #bbb;
+            font-size: 17px;
+            margin-bottom: 15px;
+        }
+
+        .info-box {
+            background: #111719;
+            padding: 30px;
+            border-left: 4px solid #ffd21c;
+            border-radius: 10px;
+        }
+
+        .info-box h3 {
+            color: #ffd21c;
+            font-size: 25px;
+            margin-bottom: 5px;
+        }
+
+        .info-telugu {
+            color: #fff;
+            margin-bottom: 15px;
+        }
+
+        .timing {
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+
+        /* LOCATION */
+
+        .location-box {
+            margin-top: 35px;
+            padding: 30px;
+            background: #111719;
+            border-radius: 12px;
+            text-align: center;
+            border: 1px solid #30383b;
+        }
+
+        .location-box h3 {
+            color: #ffd21c;
+            font-size: 25px;
+        }
+
+        .location-telugu {
+            color: #ffd21c;
+            margin-bottom: 10px;
+        }
+
+        .location-box p {
+            color: #ccc;
+            font-size: 18px;
+        }
+
+
+        /* CONTACT */
+
+        .contact {
+            text-align: center;
+            background: #0e1315;
+        }
+
+        .contact h2 {
+            font-size: 45px;
+            margin-bottom: 5px;
+        }
+
+        .contact-telugu {
+            color: #ffd21c;
+            font-size: 22px;
+        }
+
+        .phone {
+            display: inline-block;
+            margin: 20px 0;
+            font-size: 32px;
+            color: #ffd21c;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+
+        /* FOOTER */
+
+        footer {
+            padding: 25px;
+            text-align: center;
+            background: #050708;
+            color: #888;
+        }
+
+        footer strong {
+            color: #ffd21c;
+        }
+
+
+        /* MOBILE */
+
+        @media (max-width: 900px) {
+
+            nav ul {
+                display: none;
+            }
+
+            .hero {
+                min-height: 600px;
+                padding: 60px 6%;
+
+                background:
+                    linear-gradient(rgba(8,12,14,0.75), rgba(8,12,14,0.9)),
+                    url("https://images.unsplash.com/photo-1485965120184-e220f721d03e?auto=format&fit=crop&w=1200&q=85");
+
+                background-size: cover;
+                background-position: center;
+            }
+
+            .services {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .gallery {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .about {
+                grid-template-columns: 1fr;
+            }
+        }
+
+
+        @media (max-width: 600px) {
+
+            nav {
+                padding: 15px 5%;
+            }
+
+            .logo {
+                font-size: 18px;
+            }
+
+            .call-btn {
+                padding: 9px 12px;
+                font-size: 12px;
+            }
+
+            .hero {
+                min-height: 650px;
+            }
+
+            .hero h1 {
+                font-size: 50px;
+            }
+
+            .hero h2 {
+                font-size: 25px;
+            }
+
+            .hero-text {
+                font-size: 16px;
+            }
+
+            section {
+                padding: 60px 5%;
+            }
+
+            .section-title {
+                font-size: 35px;
+            }
+
+            .services {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery img {
+                height: 280px;
+            }
+
+            .phone {
+                font-size: 25px;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- NAVBAR -->
+
+    <nav>
+
+        <div class="logo">
+            🚲 VENKANNA CYCLE SHOP
+            <span>BEST QUALITY FIRST</span>
+        </div>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <!-- Direct Dialer -->
+        <a class="call-btn" href="tel:9491532017">
+            📞 Call Now
+        </a>
+
+    </nav>
+
+
+
+    <!-- HERO -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <div class="experience">
+                20+ YEARS OF EXPERIENCE
+            </div>
+
+            <div class="telugu-small">
+                20 సంవత్సరాల అనుభవం
+            </div>
+
+            <h1>
+                VENKANNA<br>
+                CYCLE SHOP
+            </h1>
+
+            <h2>
+                Best Quality First
+            </h2>
+
+            <div class="hero-telugu">
+                ఉత్తమ నాణ్యతే మా మొదటి ప్రాధాన్యత
+            </div>
+
+            <p class="hero-text">
+                Trusted cycle repair service with more than
+                20 years of experience. Quality work, honest
+                service and reliable repairs for every cycle.
+                <br><br>
+
+                20 సంవత్సరాల అనుభవంతో నమ్మకమైన సైకిల్ రిపేర్
+                మరియు సర్వీస్ అందిస్తున్నాము.
+            </p>
+
+            <div class="buttons">
+
+                <a class="main-btn" href="tel:9491532017">
+                    📞 Call Now
+                </a>
+
+                <a class="whatsapp-btn"
+                   href="https://wa.me/919491532017"
+                   target="_blank">
+                    💬 WhatsApp
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- SERVICES -->
+
+    <section id="services">
+
+        <h2 class="section-title">
+            OUR <span class="yellow">SERVICES</span>
+        </h2>
+
+        <div class="telugu-title">
+            మా సేవలు
+        </div>
+
+        <p class="section-subtitle">
+            Complete care for your cycle — from small fixes to major repairs.
+            <br>
+            మీ సైకిల్‌కు చిన్న రిపేర్ నుండి పూర్తి సర్వీస్ వరకు అన్ని సేవలు.
+        </p>
+
+
+        <div class="services">
+
+            <div class="service-card">
+                <div class="service-icon">🔧</div>
+                <h3>General Service</h3>
+                <div class="service-telugu">సాధారణ సర్వీస్</div>
+                <p>
+                    Complete cycle checkup, tuning and maintenance.
+                </p>
+            </div>
+
+
+            <div class="service-card">
+                <div class="service-icon">⚙️</div>
+                <h3>Brake Repair</h3>
+                <div class="service-telugu">బ్రేక్ రిపేర్</div>
+                <p>
+                    Brake adjustment, repair and replacement.
+                </p>
+            </div>
+
+
+            <div class="service-card">
+                <div class="service-icon">⭕</div>
+                <h3>Tyre & Tube</h3>
+                <div class="service-telugu">టైర్ & ట్యూబ్</div>
+                <p>
+                    Puncture repair, tube and tyre replacement.
+                </p>
+            </div>
+
+
+            <div class="service-card">
+                <div class="service-icon">🔗</div>
+                <h3>Chain & Gear</h3>
+                <div class="service-telugu">చైన్ & గేర్ సర్వీస్</div>
+                <p>
+                    Chain cleaning, adjustment and gear tuning.
+                </p>
+            </div>
+
+
+            <div class="service-card">
+                <div class="service-icon">🚲</div>
+                <h3>Cycle Repair</h3>
+                <div class="service-telugu">సైకిల్ రిపేర్</div>
+                <p>
+                    All types of cycle repairs and maintenance.
+                </p>
+            </div>
+
+
+            <div class="service-card">
+                <div class="service-icon">🛠️</div>
+                <h3>Complete Repair</h3>
+                <div class="service-telugu">పూర్తి రిపేర్</div>
+                <p>
+                    Professional repair for all kinds of bicycles.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- GALLERY -->
+
+    <section id="gallery">
+
+        <h2 class="section-title">
+            OUR <span class="yellow">WORK</span>
+        </h2>
+
+        <div class="telugu-title">
+            మా పనితనం
+        </div>
+
+        <p class="section-subtitle">
+            Quality work is our first priority.
+            <br>
+            నాణ్యమైన పని చేయడమే మా లక్ష్యం.
+        </p>
+
+
+        <div class="gallery">
+
+            <div class="gallery-item">
+
+                <img
+                    src="https://images.unsplash.com/photo-1571068316344-75bc76f77890?auto=format&fit=crop&w=700&q=85"
+                    alt="Cycle Repair">
+
+                <div class="gallery-title">
+                    Cycle Repair
+                    <div class="gallery-telugu">
+                        సైకిల్ రిపేర్
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="gallery-item">
+
+                <img
+                    src="https://images.unsplash.com/photo-1485965120184-e220f721d03e?auto=format&fit=crop&w=700&q=85"
+                    alt="Bicycle Service">
+
+                <div class="gallery-title">
+                    Bicycle Service
+                    <div class="gallery-telugu">
+                        సైకిల్ సర్వీస్
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="gallery-item">
+
+                <img
+                    src="https://images.unsplash.com/photo-1541625602330-2277a4c46182?auto=format&fit=crop&w=700&q=85"
+                    alt="Bicycle Workshop">
+
+                <div class="gallery-title">
+                    Full Cycle Tuning
+                    <div class="gallery-telugu">
+                        పూర్తి సైకిల్ ట్యూనింగ్
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="gallery-item">
+
+                <img
+                    src="https://images.unsplash.com/photo-1502744688674-c619d1586c9e?auto=format&fit=crop&w=700&q=85"
+                    alt="Bicycles">
+
+                <div class="gallery-title">
+                    Quality Cycles
+                    <div class="gallery-telugu">
+                        నాణ్యమైన సైకిల్ సేవలు
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ABOUT -->
+
+    <section id="about">
+
+        <div class="about">
+
+            <div>
+
+                <h2>
+                    ABOUT <span class="yellow">US</span>
+                </h2>
+
+                <div class="about-telugu">
+                    మా గురించి
+                </div>
+
+                <p>
+                    Welcome to <strong>VenKanna Cycle Shop</strong>,
+                    a trusted cycle repair shop with more than
+                    <strong>20 years of experience</strong>.
+                </p>
+
+                <p>
+                    <strong>వెంకన్న సైకిల్ షాప్</strong>కు స్వాగతం.
+                    20 సంవత్సరాలుగా నమ్మకమైన సైకిల్ రిపేర్
+                    సేవలను అందిస్తున్నాము.
+                </p>
+
+                <p>
+                    Our goal is simple —
+                    <strong>Best Quality First.</strong>
+                </p>
+
+                <p>
+                    మా లక్ష్యం ఒక్కటే —
+                    <strong>ఉత్తమ నాణ్యతే మొదటి ప్రాధాన్యత.</strong>
+                </p>
+
+            </div>
+
+
+            <div class="info-box">
+
+                <h3>🕐 SHOP TIMINGS</h3>
+
+                <div class="info-telugu">
+                    షాప్ పని వేళలు
+                </div>
+
+                <p class="timing">
+                    7:00 AM – 10:00 PM
+                </p>
+
+                <p>
+                    Open Every Day
+                    <br>
+                    ప్రతిరోజూ తెరిచి ఉంటుంది
+                </p>
+
+                <br>
+
+                <p>
+                    <strong>No Weekly Holidays</strong>
+                    <br>
+                    <strong>వారానికి సెలవు లేదు</strong>
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- LOCATION -->
+
+        <div class="location-box">
+
+            <h3>📍 VISIT OUR SHOP</h3>
+
+            <div class="location-telugu">
+                మా షాప్‌ను సందర్శించండి
+            </div>
+
+            <p>
+                Borenarsapur, Mangapet
+            </p>
+
+            <p>
+                బోరెనర్సాపూర్, మంగపేట
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- CONTACT -->
+
+    <section class="contact" id="contact">
+
+        <h2>
+            NEED A <span class="yellow">REPAIR?</span>
+        </h2>
+
+        <div class="contact-telugu">
+            సైకిల్ రిపేర్ కావాలా?
+        </div>
+
+        <p>
+            Call us or contact us on WhatsApp.
+            <br>
+            మాకు కాల్ చేయండి లేదా WhatsApp ద్వారా సంప్రదించండి.
+        </p>
+
+        <!-- Direct Dialer -->
+
+        <a class="phone" href="tel:9491532017">
+            📞 9491532017
+        </a>
+
+        <div class="buttons"
+             style="justify-content:center;">
+
+            <a class="main-btn" href="tel:9491532017">
+                📞 Call Now
+            </a>
+
+            <a class="whatsapp-btn"
+               href="https://wa.me/919491532017"
+               target="_blank">
+                💬 WhatsApp Us
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        © 2026 <strong>VENKANNA CYCLE SHOP</strong>.
+        All Rights Reserved.
+
+        <br>
+
+        <strong>Best Quality First</strong> 🚲
+
+        <br>
+
+        ఉత్తమ నాణ్యతే మా మొదటి ప్రాధాన్యత
+
+        <br>
+
+        Borenarsapur, Mangapet
+
+    </footer>
+
+
+</body>
+
+</html>
+```
